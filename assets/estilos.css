@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #676767;
+}
+
+#reproductor {
+    margin-top: 150px;
+    margin-left: 30%;
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.91);
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+button{
+    position: relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+button, img {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px;
+    
+}
+
+#progreso{
+    background-color: #0014ff;
+    width: 400px;
+    
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    
+}
+
+#botones{
+    width: 400px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 80px;
+}
