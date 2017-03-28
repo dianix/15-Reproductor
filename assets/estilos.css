@@ -14,27 +14,26 @@ body {
     background-color: #6879a0;
 }
 
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+}
+
 #reproductor {
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: 30%;
     width: 500px;
     height: 200px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.80);
     border-radius: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#tiempo {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    font-family: sans-serif;
-    font-size: 11px;
-    margin-left: auto;
-    margin-right: auto;
-}
 button, img {
     height: 40px;
     width: 40px;
@@ -42,12 +41,12 @@ button, img {
     border: 0px;
 }
 
-#progreso{
+#barraProgreso{
     
     width: 400px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 #botones{
@@ -55,5 +54,14 @@ button, img {
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#tiempo {
+    color: #07396c;
+    margin-left: 220px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
 }

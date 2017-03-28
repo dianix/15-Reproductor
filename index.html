@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Reproductor</title>
+    <!-- BONITO ICONITO DE PESTAÑA =) <3 -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.ico">
     <link rel="stylesheet" href="assets/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:500,700,900" rel="stylesheet">
 </head>
 <body>
+    <h1>Reproductor de audio</h1>
+    <!-- CAJA QUE CONTIENE LOS ELEMENTOS DE MI REPRODUCTOR -->
     <section id="reproductor">
-        <audio src="assets/multimedia/Moloko%20-%20Fun%20For%20Me.mp3" id="archivoAudio" ontimeupdate="barraProgreso();">        
+        <!-- ENLACE A ARCHIVO DE AUDIO -->
+        <audio src="assets/multimedia/Moloko%20-%20Fun%20For%20Me.mp3" id="archivoAudio" ontimeupdate="barraProgreso(); progreso();">        
         </audio>
-        <progress type="range" id="progreso" value="" min="20" max=""></progress>
+        <!-- BARRA DE PROGRESO EXITOSA -->
+        <input type="range" id="barraProgreso" step="0.1" value="0">
+                
+        <!-- BARRA DE PROGRESO FALLIDA -->
+        <!--<progress type="range" id="progreso" value="" min="20" max=""></progress> -->
+        
+        <!-- BOTONERA -->
         <div id="botones">
             <button id="rewind" onclick="retroceder()"><img src="assets/imgs/rewind.png"></button>
             <button id="play" onclick="reproducir()"><img src="assets/imgs/play.png"></button>
@@ -21,7 +32,8 @@
             <button id="volumeDown" onclick="bajarVolumen()"><img src="assets/imgs/volume-down.png"></button>
             <button id="volumeUp" onclick="subirVolumen()"><img src="assets/imgs/volume-up.png"></button>
         </div>
-        <span id="tiempo"></span>
+        <!-- TIEMPO ACTUAL DE REPRODUCCIÓN -->
+        <time id="tiempo">00:00</tme>
     </section>
     <script src="assets/main.js"></script>
 </body>
