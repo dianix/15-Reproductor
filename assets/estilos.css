@@ -3,9 +3,15 @@
     padding: 0;
 }
 
-html, body {
+html{
     height: 100%;
-    background-color: #676767;
+}
+
+body {
+    height: 100%;
+    background-image: url(imgs/image.jpg);
+    background-size: cover;
+    background-color: #6879a0;
 }
 
 #reproductor {
@@ -13,42 +19,41 @@ html, body {
     margin-left: 30%;
     width: 500px;
     height: 200px;
-    background-color: rgba(255, 255, 255, 0.91);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
 }
-button{
+
+#tiempo {
+    width: 100px;
+    height: 40px;
     position: relative;
-    
+    font-family: sans-serif;
+    font-size: 11px;
     margin-left: auto;
     margin-right: auto;
-    
-    
 }
 button, img {
     height: 40px;
     width: 40px;
     background-color: rgba(240, 248, 255, 0);
     border: 0px;
-    
 }
 
 #progreso{
-    background-color: #0014ff;
-    width: 400px;
     
+    width: 400px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 30px;
-    
+    margin-top: 50px;
 }
 
 #botones{
-    width: 400px;
+    width: 350px;
     height: 40px;
-    margin-left: 50px;
-    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }

@@ -8,20 +8,20 @@
 </head>
 <body>
     <section id="reproductor">
-        <audio id="archivoAudio">
-            <source src="assets/multimedia/Moloko%20-%20Fun%20For%20Me.mp3" type="audio/mpeg">
+        <audio src="assets/multimedia/Moloko%20-%20Fun%20For%20Me.mp3" id="archivoAudio" ontimeupdate="barraProgreso();">        
         </audio>
-        <input type="range" id="progreso">
+        <progress type="range" id="progreso" value="" min="20" max=""></progress>
         <div id="botones">
-            <button id="rewind" onclick="retroceder()"><img src="assets/imgs/rewind-128.png"></button>
+            <button id="rewind" onclick="retroceder()"><img src="assets/imgs/rewind.png"></button>
             <button id="play" onclick="reproducir()"><img src="assets/imgs/play.png"></button>
             <button id="pause" onclick="pausar()"><img src="assets/imgs/pause.png"></button>
-            <button id="forward" onclick="avanzar()"><img src="assets/imgs/fast-forward-128.png"></button>
+            <button id="forward" onclick="avanzar()"><img src="assets/imgs/forward.png"></button>
             <button id="stop" onclick="parar()"><img src="assets/imgs/stop.png"></button>
             <button></button>
-            <button id="volumeDown" onclick="bajarVolumen()"><img src="assets/imgs/volume-down-128.png"></button>
-            <button id="volumeUp" onclick="subirVolumen()"><img src="assets/imgs/volume-up-128.png"></button>
+            <button id="volumeDown" onclick="bajarVolumen()"><img src="assets/imgs/volume-down.png"></button>
+            <button id="volumeUp" onclick="subirVolumen()"><img src="assets/imgs/volume-up.png"></button>
         </div>
+        <span id="tiempo"></span>
     </section>
     <script src="assets/main.js"></script>
 </body>

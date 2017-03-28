@@ -15,8 +15,15 @@ function parar(){
 
 function progreso(){
     var duracionAudio = elementoAudio.duration;
-    document.getElementById("barraProgreso").max = duracionAudio;
-    document.getElementById("barraProgreso").value = elementoAudio.currentTime;
+    var barra = document.getElementById("barraProgreso");
+     barra.value = elementoAudio.currentTime;
+    barra.max = duracionAudio;
+    tiempo();
+}
+
+function tiempo(){
+    var tiempo = document.getElementById("tiempo");
+    tiempo.innerHTML = elementoAudio.currentTime;
 }
 
 function subirVolumen(){
@@ -28,9 +35,9 @@ function bajarVolumen(){
 }
 
 function avanzar(){
-    elementoAudio.currentTime += 1;
+    elementoAudio.currentTime += 2;
 }
 
 function retroceder(){
-    elementoAudio.currentTime -= 1;
+    elementoAudio.currentTime -= 2;
 }
