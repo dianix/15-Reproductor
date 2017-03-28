@@ -1,7 +1,18 @@
 //alert("Holaaaaaa");
 
-// VARIABLE GLOBAL QUE GUARDA EL AUDIO
-var elementoAudio = (document.getElementById("archivoAudio"));
+// VARIABLES GLOBALES QUE GUARDAN EL AUDIO Y DURACION
+/*var elementoAudio = document.getElementById("archivoAudio");
+var duracionAudio = elementoAudio.duration;*/
+
+var elementoAudio;
+var duracionAudio;
+
+window.onload = function(){
+    elementoAudio = document.getElementById("archivoAudio");
+    duracionAudio = elementoAudio.duration;
+} 
+console.log(elementoAudio);
+console.log(duracionAudio);
 
 // *** FUNCIONES PARA BOTONES ***
 function reproducir(){
@@ -13,29 +24,37 @@ function pausar(){
 }
 
 function parar(){
-    elementoAudio.load();
+    //elementoAudio.load();
+    elementoAudio.currentTime = 0;
+    elementoAudio.pause();
 }
 
 function subirVolumen(){
-    elementoAudio.volume += 0.2;
+    
+    if(elementoAudio.volume < 1){
+        elementoAudio.volume += 0.2;    
+    }
 }
 
 function bajarVolumen(){
-    elementoAudio.volume -= 0.2;
+    if(elementoAudio.volume >= 0.1){
+        elementoAudio.volume -= 0.2;
+    }
 }
 
 function avanzar(){
-    elementoAudio.currentTime += 2;
+    elementoAudio.currentTime += 5;
 }
 
 function retroceder(){
-    elementoAudio.currentTime -= 2;
+    elementoAudio.currentTime -= 5;
 }
 
 // *** PARA MOVER BARRA DE PROGRESO Y ENVIAR AL RELOJ EL TIEMPO TRANSCURRIDO ***
-elementoAudio.ontimeupdate = function(){
+function barraProgreso(){
     var barraProgreso = document.getElementById("barraProgreso");
     barraProgreso.value = elementoAudio.currentTime;
+    barraProgreso.max = duracionAudio;
     
     var tiempoActual = elementoAudio.currentTime;
     var contadorTiempo = formatoReloj(tiempoActual);
